@@ -36,6 +36,9 @@ export function echoWithSpace(word, n) {
   if (n <= 0) {
     return "";
   }
+  if (word.length === 0) {
+    return "";
+  }
   let result = "";
   let i = 1;
   while (i < n) {
