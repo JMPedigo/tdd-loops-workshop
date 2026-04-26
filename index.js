@@ -33,6 +33,9 @@ export function echo(word, n) {
  * echoWithSpace("test", 1); // "test"
  */
 export function echoWithSpace(word, n) {
+  if (n <= 0) {
+    return "";
+  }
   let result = "";
   let i = 1;
   while (i < n) {
