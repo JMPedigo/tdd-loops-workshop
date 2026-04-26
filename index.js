@@ -103,7 +103,12 @@ export function sumFromTo(a, z) {
  * countdown(5); // logs 5, 4, 3, 2, 1
  */
 export function countdown(n) {
-  // TODO
+  let result = 0;
+  let i = n;
+  while (i > 0) {
+    console.log(i);
+    i--;
+  }
 }
 
 /**
