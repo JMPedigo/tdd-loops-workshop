@@ -179,9 +179,21 @@ export function getGrowthTime(start, target) {
  * getCompoundTime(30000, 0.04, 50000); // 14
  */
 export function getCompoundTime(start, rate, target) {
-  // TODO
+  if (start <= 0 || rate <= 0) {
+    return undefined;
+  }
+  if (start >= target) {
+    return 0;
+  }
+  let i = 0;
+  while (start <= target) {
+    let growth = start * rate;
+    i++;
+    start += growth;
+  }
+  return i;
 }
-
+console.log(getCompoundTime(100, 0, 100));
 /**
  * An empty bucket sits some distance away from a water faucet.
  * You need to fill the bucket with water, but your only container
