@@ -182,15 +182,18 @@ export function getCompoundTime(start, rate, target) {
   if (start <= 0 || rate <= 0) {
     return undefined;
   }
+
   if (start >= target) {
     return 0;
   }
+
   let i = 0;
   while (start <= target) {
     let growth = start * rate;
     i++;
     start += growth;
   }
+
   return i;
 }
 console.log(getCompoundTime(100, 0, 100));
