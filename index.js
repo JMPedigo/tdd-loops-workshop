@@ -196,7 +196,7 @@ export function getCompoundTime(start, rate, target) {
 
   return i;
 }
-console.log(getCompoundTime(100, 0, 100));
+
 /**
  * An empty bucket sits some distance away from a water faucet.
  * You need to fill the bucket with water, but your only container
@@ -219,8 +219,28 @@ console.log(getCompoundTime(100, 0, 100));
  * @example
  * moveWater(7, 3); // 1
  */
+
 export function moveWater(colander, bucket) {
-  // TODO
+  if (colander <= 0) {
+    return undefined;
+  }
+  if (bucket <= 0) {
+    return 0;
+  }
+  if (colander >= bucket) {
+    return 1;
+  }
+  if (colander === 1) {
+    return bucket;
+  }
+  let amount = 0;
+  let trips = 0;
+  while (amount < bucket) {
+    amount += colander;
+    colander = Math.max(1, colander - 1);
+    trips++;
+  }
+  return trips;
 }
 
 /**
