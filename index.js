@@ -150,7 +150,16 @@ export function sumOddsToN(n) {
  * getGrowthTime(5, 78); // 80
  */
 export function getGrowthTime(start, target) {
-  // TODO
+  if (start <= 0) {
+    return undefined;
+  }
+
+  let i = 0;
+  while (start < target) {
+    start *= 2;
+    i++;
+  }
+  return i * 20;
 }
 
 /**
