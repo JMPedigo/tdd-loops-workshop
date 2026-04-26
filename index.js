@@ -83,9 +83,14 @@ export function sumTo(n) {
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+  let result = 0;
+  let i = a;
+  while (i <= z) {
+    result += i;
+    i++;
+  }
+  return result;
 }
-
 /**
  * Counts down from n to 1, inclusive, by logging each number to the console.
  * @param {number} n - The number to start counting down from.
