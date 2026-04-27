@@ -171,7 +171,7 @@ describe("getCompoundTime", function () {
   });
 });
 
-describe.only("moveWater", function () {
+describe("moveWater", function () {
   it("returns undefined if colander <= 0", () => {
     expect(moveWater(0, 10)).toBeUndefined();
     expect(moveWater(-3, 10)).toBeUndefined();

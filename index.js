@@ -237,7 +237,7 @@ export function moveWater(colander, bucket) {
   let trips = 0;
   while (amount < bucket) {
     amount += colander;
-    colander = Math.max(1, colander - 1);
+    colander = Math.max(1, colander - 1); // Ah... good ol' Google.
     trips++;
   }
   return trips;
@@ -260,5 +260,15 @@ export function moveWater(colander, bucket) {
  * fizzbuzz(15); // logs 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
  */
 export function fizzbuzz(n) {
-  // TODO
+  for (let i = 1; i <= n; i++) {
+    if (i % 5 === 0 && i % 3 === 0) {
+      console.log("fizzbuzz");
+    } else if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
+  }
 }
