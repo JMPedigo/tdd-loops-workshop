@@ -12,9 +12,7 @@
  */
 export function echo(word, n) {
   let result = "";
-  let i = 0;
-  while (i < n) {
-    i++;
+  for (let i = 0; i < n; i++) {
     result += word;
   }
   return result;
